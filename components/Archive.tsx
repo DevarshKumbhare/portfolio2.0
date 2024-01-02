@@ -18,9 +18,9 @@ const Archive = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
         <ArchiveCard
           title="Smart Parking using License Plate Recognision"
-          des=" Worked on a project to implement Smart-Parking
+          des="implementing Smart-Parking
            using License Plate Recognision for parking spaces using various technologies in a  fullstack framework."
-          listItem={["React.js", "Express.js", "PostgreSQL", "Node.js", "OpenCV", "Springboot"]}
+          listItem={["React.js", "Express.js", "PostgreSQL","OpenCV"]}
           link="https://github.com/DevarshKumbhare/Smart_parking_LPR"
         />
         <ArchiveCard
