@@ -98,11 +98,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold">Realtime Group Chat Applicatiion</h3>
             </div>
             <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md xl:-mr-16">
-            An innovative web scraping and conversational question-answering application{" "}
-              <span className="text-textGreen">comments on</span> it by passing
-              your ideas besides you can try to add your own{" "}
-              <span className="text-textGreen">post</span> on it by logging on
-              the portal.
+            A group chat <span className="text-textGreen">realtime</span> application alongwith <span className="text-textGreen">user authentication</span> to have a seemless group conversation.{" "}
             </p>
             <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
               <li>Reactjs</li>
@@ -132,7 +128,7 @@ const Projects = () => {
         <div className="flex flex-col xl:flex-row gap-6">
           <a
             className="w-full xl:w-1/2 h-auto relative group"
-            href="https://github.com/HarshChalikwar/MWH"
+            href="https://github.com/DevarshKumbhare/MWH"
             target="_blank"
           >
             <div>
@@ -147,7 +143,7 @@ const Projects = () => {
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right xl:-ml-16 z-10">
             <div>
               <p className="font-titleFont text-textGreen text-sm tracking-wide">
-                Moveworks HACK-AI-THON Runner's-Up Project
+                Moveworks HACK-AI-THON 1st Runner-up Project
               </p>
               <h3 className="text-2xl font-bold">Web Scraping Copilot</h3>
             </div>
@@ -166,7 +162,7 @@ const Projects = () => {
             <div className="text-2xl flex gap-4">
               <a
                 className="hover:text-textGreen duration-300"
-                href="https://github.com/HarshChalikwar/MWH"
+                href="https://github.com/DevarshKumbhare/MWH"
                 target="_blank"
               >
                 <TbBrandGithub />
