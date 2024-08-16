@@ -11,7 +11,7 @@ const Contact = () => {
       </p>
       <h2 className="font-titleFont text-5xl font-semibold">Get In Touch</h2>
       <p className="max-w-[600px] text-center text-textDark">
-        I am open to work and collaborate through the Summer of 2024. Feel free to drop
+        I am open to collaborate. Feel free to drop
         a mail to have a conversation or ask any questions.
       </p>
 
