@@ -15,8 +15,9 @@ import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
-  const ref = useRef<string | any>("");
+  const ref = useRef<HTMLDivElement | null>(null);
   const [show, setShow] = useState(false);
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setShow(false);
@@ -34,12 +35,12 @@ const Navbar = () => {
     e.currentTarget.classList.add("active");
   };
 
-  function handleClick(e: any) {
-    if (e.target.contains(ref.current)) {
-      // do something with myRef.current
+  function handleClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    if (ref.current && e.target instanceof HTMLElement && ref.current.contains(e.target)) {
       setShow(false);
     }
   }
+
   return (
     <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-[100] bg-bodyColor px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between ">
@@ -70,7 +71,6 @@ const Navbar = () => {
                 Home
               </motion.li>
             </Link>
-
             <Link
               className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               href="#about"
@@ -150,7 +150,7 @@ const Navbar = () => {
         </div>
         {show && (
           <div
-            ref={(node) => (ref.current = node)}
+            ref={ref}
             onClick={handleClick}
             className="absolute mdl:hidden top-0 right-0 w-full h-screen  bg-black bg-opacity-50 flex flex-col items-end"
           >
@@ -179,7 +179,6 @@ const Navbar = () => {
                       Home
                     </motion.li>
                   </Link>
-
                   <Link
                     className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
                     href="#about"

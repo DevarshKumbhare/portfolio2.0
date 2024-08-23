@@ -12,7 +12,6 @@
     "@react-three/drei": "^9.111.2",
     "@react-three/fiber": "^8.17.5",
     "@types/node": "18.15.7",
-    "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -27,6 +26,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@types/react": "18.3.4",
     "@types/react-scroll": "^1.8.6",
     "@types/three": "^0.167.2",
     "autoprefixer": "^10.4.14",

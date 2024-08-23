@@ -12,7 +12,7 @@ export default function Model() {
   const [playTime, setPlayTime] = useState(0);
 
   useEffect(() => {
-    if (actions["Experiment"]) {
+    if (actions && actions["Experiment"]) {
       actions["Experiment"].play().paused = true;
     }
   }, [actions]);
@@ -26,20 +26,25 @@ export default function Model() {
       startTime = time;
       setPlayTime((prev) => {
         const newTime = prev + elapsedTime;
-        const duration = actions["Experiment"].getClip().duration;
+
+        // Check if actions["Experiment"] is defined
+        const duration = actions["Experiment"]?.getClip().duration || 0;
+
         return newTime % duration; // Loop the animation time
       });
       animationFrameId = requestAnimationFrame(updatePlayTime);
     };
 
-    startTime = performance.now();
-    animationFrameId = requestAnimationFrame(updatePlayTime);
+    if (actions && actions["Experiment"]) {
+      startTime = performance.now();
+      animationFrameId = requestAnimationFrame(updatePlayTime);
+    }
 
     return () => cancelAnimationFrame(animationFrameId);
   }, [actions]);
 
   useFrame(() => {
-    if (actions["Experiment"]) {
+    if (actions && actions["Experiment"]) {
       actions["Experiment"].time = playTime;
     }
   });
