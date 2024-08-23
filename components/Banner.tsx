@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
+import { ComponentType } from "react";
+
+// const Scene = dynamic(() => import("./components/Scene") as Promise<ComponentType<any>>, {
+//   ssr: false,
+// });
+
+
 // Dynamically import the Scene component (robot animation)
 const Scene = dynamic(() => import("./components/Scene"), { ssr: false });
 
